@@ -1,0 +1,702 @@
+import type { Locale } from "./site";
+
+/**
+ * Every visible string on the site lives here, in English and Hindi.
+ * Hindi is written the way people actually speak around a Delhi print shop,
+ * not textbook Hindi. Brand and model names stay as they are.
+ */
+
+const en = {
+  nav: {
+    services: "Services",
+    howItWorks: "How it works",
+    finder: "Find cartridge",
+    faq: "FAQs",
+    contact: "Contact",
+    call: "Call now",
+    quote: "Get a quote",
+    openMenu: "Open menu",
+    closeMenu: "Close menu",
+    menuTitle: "Menu",
+    mainMenu: "Main menu",
+    languageLabel: "Choose language",
+    englishLabel: "English",
+    hindiLabel: "Hindi",
+    skipToContent: "Skip to main content",
+  },
+  hero: {
+    eyebrow: "Your local cartridge shop · New Ranjeet Nagar",
+    title: "Printer cartridge refilling in New Ranjeet Nagar, New Delhi",
+    titleHighlight: "New Ranjeet Nagar",
+    description:
+      "New cartridges and expert refills for inkjet, laser and toner printers — for homes, students, shops, offices and schools. Save money, skip the mall run, and keep printing.",
+    callNow: "Call now",
+    whatsapp: "WhatsApp us",
+    phonesLabel: "Both numbers reach the shop",
+    trust: [
+      "Inkjet · Laser · Toner",
+      "Pickup & delivery available",
+      "Bulk supply for offices & schools",
+    ],
+    visualLabel: "CMYK",
+    visualCaption: "One cartridge. Three colours. Refilled locally.",
+    scrollCue: "Scroll",
+  },
+  services: {
+    eyebrow: "What we do",
+    title: "One shop for everything your printer needs",
+    description:
+      "From a quick ink refill to a month of supplies for your office, it all happens here.",
+    items: [
+      {
+        tag: "Refill",
+        title: "Cartridge refilling",
+        description:
+          "Bring your used inkjet or laser cartridge. We clean it, refill it with quality ink or toner, and test-print it before handover.",
+      },
+      {
+        tag: "New",
+        title: "New cartridges",
+        description:
+          "New original and compatible cartridges for HP, Canon, Epson, Brother, Samsung and other printers. We'll help you pick the right one.",
+      },
+      {
+        tag: "Toner",
+        title: "Toner refilling",
+        description:
+          "Laser printer toner refilled and checked, with a test print before you take it home.",
+      },
+      {
+        tag: "Accessories",
+        title: "Printer accessories",
+        description:
+          "Ink bottles, toner, cables and everyday printer supplies. Call to check what's in stock.",
+      },
+      {
+        tag: "Bulk",
+        title: "Bulk & office supply",
+        description:
+          "Regular refills and cartridge supply for offices, schools and shops. Tell us your monthly need and we'll quote.",
+      },
+    ],
+  },
+  steps: {
+    eyebrow: "How refilling works",
+    title: "Four simple steps. No jargon.",
+    description:
+      "From dropping off the cartridge to the test print, everything is explained upfront.",
+    items: [
+      {
+        title: "Tell us your model",
+        description:
+          "Send a photo on WhatsApp or give us a call. We'll confirm whether your cartridge can be refilled.",
+      },
+      {
+        title: "Know the price first",
+        description:
+          "We quote before starting the work. No surprise add-ons when you collect.",
+      },
+      {
+        title: "We refill and test",
+        description:
+          "Your cartridge is cleaned, refilled and test-printed so you know it works before you leave.",
+      },
+      {
+        title: "Collect or ask about delivery",
+        description:
+          "Pick it up from the shop, or ask us about pickup and delivery for your area.",
+      },
+    ],
+    cta: "Send a photo on WhatsApp",
+    note: "Not sure of the model? A clear photo of the cartridge label is enough.",
+    waMessage:
+      "Hello Guru Kirpa Refilling Centre, I'd like a refill quote. I'm sending a photo of my cartridge.",
+  },
+  why: {
+    eyebrow: "Why Guru Kirpa",
+    title: "A local shop you can walk into",
+    description:
+      "A real shop in New Ranjeet Nagar, where you can talk to the person doing the work — not a call centre.",
+    items: [
+      {
+        title: "Save on every print",
+        description:
+          "A refill usually costs less than a new cartridge, so your printing budget goes further.",
+      },
+      {
+        title: "Quick, without the runaround",
+        description:
+          "Call ahead and we'll tell you when your cartridge will be ready for pickup.",
+      },
+      {
+        title: "Ink we stand behind",
+        description:
+          "Quality inks and toners, chosen for clean, consistent prints — and tested before handover.",
+      },
+      {
+        title: "A lighter footprint",
+        description:
+          "Every refilled cartridge is one less piece of plastic thrown away.",
+      },
+    ],
+    cta: "Find the shop",
+  },
+  finder: {
+    eyebrow: "Cartridge finder",
+    title: "Find your cartridge in seconds",
+    description:
+      "Type your printer model or cartridge number. We'll show whether a refill is available and how to ask us on WhatsApp.",
+    searchLabel: "Printer model or cartridge number",
+    placeholder: "Try “HP 1005” or “Canon G2012”",
+    quickLabel: "Try a model",
+    clear: "Clear search",
+    resultsLabel: "Matching cartridges",
+    match: "match",
+    matches: "matches",
+    refillAvailable: "Refill available",
+    newOnly: "New cartridge only",
+    priceOnRequest: "Price on request",
+    startingFrom: "Starting from",
+    ask: "Ask on WhatsApp",
+    modelsLabel: "Works with",
+    moreModels: "+{count} more",
+    typeInk: "Inkjet",
+    typeToner: "Toner",
+    sampleNote:
+      "Sample catalogue — stock and prices must be confirmed. Send us your exact model on WhatsApp.",
+    noResultsTitle: "That model isn't in our sample list yet.",
+    noResultsDescription:
+      "No problem — send us the model name or a photo on WhatsApp and we'll check it for you.",
+    noResultsCta: "Send the model on WhatsApp",
+    browseHint: "Type your model above, or pick one of the examples.",
+    waMessage:
+      "Hello Guru Kirpa Refilling Centre, my printer model is {model}. Is the {cartridge} cartridge available for refill? What would it cost?",
+    waNoResult:
+      "Hello Guru Kirpa Refilling Centre, my model wasn't in your online list: {model}. Can you check if you can refill or supply it?",
+  },
+  pickup: {
+    eyebrow: "Pickup, delivery & bulk",
+    title: "We can come to you, too",
+    description:
+      "Pickup and delivery are available — ask us about your area. Offices, schools and shops can plan regular refills and supplies with one point of contact.",
+    badge: "Pickup & delivery available",
+    cards: [
+      {
+        title: "Homes & students",
+        description:
+          "Keep assignments, notes and everyday printing moving without a trip to the market.",
+      },
+      {
+        title: "Offices & schools",
+        description:
+          "Tell us your monthly need and we'll quote for regular refills and cartridge supply.",
+      },
+      {
+        title: "Shops & institutions",
+        description:
+          "A dependable local refill partner for the cartridges your customers bring in.",
+      },
+    ],
+    areasLabel: "Delivery area",
+    areasFallback:
+      "We deliver — message us with your area to confirm coverage.",
+    cta: "Ask about pickup & bulk supply",
+    waMessage:
+      "Hello Guru Kirpa Refilling Centre, I'd like to ask about pickup, delivery and bulk supply for my area.",
+  },
+  brands: {
+    eyebrow: "Supported brands",
+    title: "Fits the printer you already own",
+    description:
+      "Inkjet, laser and toner cartridges from the brands you see every day.",
+    similar: "and similar",
+    note: "Brand names are used only to show compatibility.",
+  },
+  quote: {
+    eyebrow: "Get a quote",
+    title: "Tell us what you need",
+    description:
+      "Fill this in and WhatsApp will open with your details ready to send. We'll reply with availability and a price.",
+    name: "Your name",
+    namePlaceholder: "e.g. Rahul",
+    phone: "Phone number",
+    phonePlaceholder: "e.g. 98XXXXXXXX",
+    model: "Printer or cartridge model",
+    modelPlaceholder: "e.g. HP LaserJet 1005 / Q2612A",
+    message: "Message",
+    messagePlaceholder: "Anything else we should know?",
+    optional: "optional",
+    submit: "Send on WhatsApp",
+    note: "This opens WhatsApp with your message filled in. Nothing is stored on this website.",
+    waOpened: "WhatsApp should have opened in a new tab.",
+    waFallback: "If it didn't open, tap here to send your message.",
+    required: "required",
+    waIntro: "Hello Guru Kirpa Refilling Centre, I'd like a quote.",
+    sidePoints: [
+      {
+        title: "Goes straight to WhatsApp",
+        description:
+          "Your details arrive as a ready-to-send WhatsApp message on our main number.",
+      },
+      {
+        title: "Nothing saved on the site",
+        description:
+          "We don't run a backend here. Your details stay in your browser until you send.",
+      },
+      {
+        title: "Write in Hindi or English",
+        description: "Use whichever language feels easier. We'll reply the same way.",
+      },
+    ],
+    errors: {
+      name: "Please enter your name.",
+      phone: "Enter a valid phone number (at least 10 digits).",
+      model: "Tell us your printer or cartridge model.",
+    },
+  },
+  faq: {
+    eyebrow: "FAQs",
+    title: "Questions, answered",
+    description:
+      "Still unsure about something? Call or WhatsApp us — we'd rather explain than have you guess.",
+    items: [
+      {
+        question: "Do refilled cartridges print as well as new ones?",
+        answer:
+          "A proper refill with quality ink gives clean results for everyday printing. The outcome also depends on the condition of your cartridge and printer. We test before handover and will tell you honestly if a refill isn't worth it.",
+      },
+      {
+        question: "How long does a refill take?",
+        answer:
+          "It depends on the cartridge and how busy the day is. Call or WhatsApp ahead and we'll give you a realistic time for your model.",
+      },
+      {
+        question: "Which brands do you handle?",
+        answer:
+          "HP, Canon, Epson, Brother, Samsung and similar inkjet, laser and toner cartridges. Send us your model and we'll confirm.",
+      },
+      {
+        question: "Do you offer pickup and delivery?",
+        answer:
+          "Yes, pickup and delivery are available. Send your area on WhatsApp and we'll confirm whether we cover it.",
+      },
+      {
+        question: "Can offices and schools get bulk rates?",
+        answer:
+          "Yes. Tell us your monthly cartridge use and we'll quote for regular refills or supply.",
+      },
+      {
+        question: "What do you check before taking my cartridge?",
+        answer:
+          "We look at the condition of the cartridge first and tell you if a refill will work reliably before we start.",
+      },
+      {
+        question: "Will refilling affect my printer warranty?",
+        answer:
+          "Refilling is done on your cartridge. Warranty terms vary between printers, so check with your printer maker if you're unsure. We're happy to explain exactly what we do.",
+      },
+    ],
+    stillStuck: "Still have a question?",
+    chatCta: "Ask on WhatsApp",
+  },
+  contact: {
+    eyebrow: "Contact",
+    title: "Visit the shop, call, or WhatsApp",
+    description:
+      "We're in New Ranjeet Nagar, New Delhi. Both numbers below reach the shop; WhatsApp is usually the fastest.",
+    addressLabel: "Address",
+    phoneLabel: "Call or WhatsApp",
+    hoursLabel: "Opening hours",
+    areasLabel: "Areas served",
+    call: "Call",
+    whatsapp: "WhatsApp",
+    directions: "Get directions",
+    openMap: "Open in Google Maps",
+    mapTitle:
+      "Google Map showing Guru Kirpa Refilling Centre in New Ranjeet Nagar, New Delhi",
+    mapLoading: "Loading map…",
+    hoursFallback: "Call or WhatsApp for current timings.",
+    areasFallback: "Ask us about your area.",
+    pickupNote: "Pickup & delivery available — ask about your area.",
+    deliveryBadge: "Pickup & delivery available",
+    primaryBadge: "Main WhatsApp",
+    secondaryBadge: "Second number",
+  },
+  footer: {
+    about:
+      "New cartridges and refills for inkjet, laser and toner printers — from a local shop in New Ranjeet Nagar, New Delhi.",
+    explore: "Explore",
+    servicesTitle: "Services",
+    contactTitle: "Contact",
+    hoursTitle: "Hours",
+    legal:
+      "Brand names are used only to show compatibility. Guru Kirpa Refilling Centre is not affiliated with or endorsed by HP, Canon, Epson, Brother, Samsung or any other brand mentioned.",
+    rights: "All rights reserved.",
+    sampleNote:
+      "The cartridge finder uses a sample catalogue. Confirm your exact model on WhatsApp.",
+    servingYears: "Serving New Ranjeet Nagar for {years} years.",
+  },
+  common: {
+    call: "Call",
+    whatsapp: "WhatsApp",
+    backHome: "Back to home",
+    waHello:
+      "Hello Guru Kirpa Refilling Centre, I'd like to ask about printer cartridge refilling.",
+  },
+  notFound: {
+    title: "This page went for a refill.",
+    description:
+      "The page you're looking for isn't here. Head back home or message us on WhatsApp.",
+    home: "Back to home",
+  },
+};
+
+const hi: typeof en = {
+  nav: {
+    services: "सर्विस",
+    howItWorks: "कैसे होता है",
+    finder: "कार्ट्रिज खोजें",
+    faq: "सवाल-जवाब",
+    contact: "संपर्क",
+    call: "कॉल कीजिए",
+    quote: "रेट पूछिए",
+    openMenu: "मेनू खोलिए",
+    closeMenu: "मेनू बंद कीजिए",
+    menuTitle: "मेनू",
+    mainMenu: "मुख्य मेनू",
+    languageLabel: "भाषा चुनिए",
+    englishLabel: "English",
+    hindiLabel: "हिंदी",
+    skipToContent: "सीधे मुख्य जानकारी पर जाइए",
+  },
+  hero: {
+    eyebrow: "आपके इलाके की कार्ट्रिज दुकान · न्यू रंजीत नगर",
+    title: "न्यू रंजीत नगर, नई दिल्ली में प्रिंटर कार्ट्रिज रिफिलिंग",
+    titleHighlight: "न्यू रंजीत नगर",
+    description:
+      "इंकजेट, लेज़र और टोनर प्रिंटर के लिए नए कार्ट्रिज और भरोसेमंद रिफिल — घर, स्टूडेंट्स, दुकानों, ऑफिस और स्कूलों के लिए। पैसे बचाइए, मार्केट के चक्कर छोड़िए और छपाई चलती रखिए।",
+    callNow: "कॉल कीजिए",
+    whatsapp: "WhatsApp कीजिए",
+    phonesLabel: "दोनों नंबर दुकान के हैं",
+    trust: [
+      "इंकजेट · लेज़र · टोनर",
+      "पिकअप और डिलीवरी उपलब्ध",
+      "ऑफिस और स्कूलों के लिए बल्क सप्लाई",
+    ],
+    visualLabel: "CMYK",
+    visualCaption: "एक कार्ट्रिज। तीन रंग। आपके इलाके में रिफिल।",
+    scrollCue: "स्क्रॉल",
+  },
+  services: {
+    eyebrow: "हम क्या करते हैं",
+    title: "आपके प्रिंटर की हर ज़रूरत, एक ही दुकान पर",
+    description:
+      "छोटे इंक रिफिल से लेकर ऑफिस की महीने भर की सप्लाई तक — सब कुछ यहीं मिल जाएगा।",
+    items: [
+      {
+        tag: "रिफिल",
+        title: "कार्ट्रिज रिफिलिंग",
+        description:
+          "पुराना इंकजेट या लेज़र कार्ट्रिज लाइए। हम उसे साफ करते हैं, अच्छी स्याही या टोनर से भरते हैं और देने से पहले टेस्ट प्रिंट करते हैं।",
+      },
+      {
+        tag: "नया",
+        title: "नए कार्ट्रिज",
+        description:
+          "HP, Canon, Epson, Brother, Samsung और दूसरे प्रिंटर के लिए नए ओरिजिनल और कंपैटिबल कार्ट्रिज। सही वाला चुनने में हम मदद करेंगे।",
+      },
+      {
+        tag: "टोनर",
+        title: "टोनर रिफिलिंग",
+        description:
+          "लेज़र प्रिंटर का टोनर भरते और जाँचते हैं, हैंडओवर से पहले टेस्ट प्रिंट के साथ।",
+      },
+      {
+        tag: "एक्सेसरीज़",
+        title: "प्रिंटर एक्सेसरीज़",
+        description:
+          "इंक बोतल, टोनर, केबल और रोज़मर्रा की प्रिंटर सामग्री। स्टॉक की जानकारी के लिए कॉल कीजिए।",
+      },
+      {
+        tag: "बल्क",
+        title: "बल्क और ऑफिस सप्लाई",
+        description:
+          "ऑफिस, स्कूल और दुकानों के लिए नियमित रिफिल और कार्ट्रिज सप्लाई। अपनी ज़रूरत बताइए, हम रेट बताएँगे।",
+      },
+    ],
+  },
+  steps: {
+    eyebrow: "रिफिलिंग कैसे होती है",
+    title: "चार आसान स्टेप। कोई उलझन नहीं।",
+    description:
+      "कार्ट्रिज देने से लेकर टेस्ट प्रिंट तक, सब कुछ पहले से साफ़-साफ़ बता दिया जाता है।",
+    items: [
+      {
+        title: "अपना मॉडल बताइए",
+        description:
+          "WhatsApp पर कार्ट्रिज की फोटो भेजिए या कॉल कीजिए। हम बता देंगे कि रिफिल हो सकता है या नहीं।",
+      },
+      {
+        title: "पहले रेट जानिए",
+        description:
+          "काम शुरू करने से पहले रेट बता देते हैं। बाद में कोई छिपा हुआ खर्च नहीं।",
+      },
+      {
+        title: "हम रिफिल करके टेस्ट करते हैं",
+        description:
+          "कार्ट्रिज साफ करके भरा जाता है और आपको देने से पहले टेस्ट प्रिंट किया जाता है।",
+      },
+      {
+        title: "ले जाइए या डिलीवरी पूछिए",
+        description:
+          "दुकान से खुद ले जाइए, या अपने इलाके में पिकअप-डिलीवरी के बारे में पूछिए।",
+      },
+    ],
+    cta: "WhatsApp पर फोटो भेजिए",
+    note: "मॉडल पता न हो तो कार्ट्रिज के लेबल की साफ़ फोटो भेज दीजिए।",
+    waMessage:
+      "नमस्ते Guru Kirpa Refilling Centre, मुझे रिफिल का रेट जानना है। मैं कार्ट्रिज की फोटो भेज रहा/रही हूँ।",
+  },
+  why: {
+    eyebrow: "Guru Kirpa क्यों?",
+    title: "आपके मोहल्ले की भरोसेमंद दुकान",
+    description:
+      "न्यू रंजीत नगर की असली दुकान, जहाँ आप सीधे उसी इंसान से बात कर सकते हैं जो आपका कार्ट्रिज संभालता है — किसी कॉल सेंटर से नहीं।",
+    items: [
+      {
+        title: "हर प्रिंट पर बचत",
+        description:
+          "रिफिल आमतौर पर नया कार्ट्रिज खरीदने से कम में पड़ता है, इसलिए प्रिंटिंग का खर्च कम रहता है।",
+      },
+      {
+        title: "बिना भागदौड़, जल्दी तैयार",
+        description:
+          "कॉल कीजिए और हम बता देंगे कि आपका कार्ट्रिज कब तैयार होगा।",
+      },
+      {
+        title: "अच्छी स्याही, साफ़ छपाई",
+        description:
+          "साफ़ और एक जैसी छपाई के लिए चुनी हुई स्याही और टोनर — देने से पहले टेस्ट के साथ।",
+      },
+      {
+        title: "पर्यावरण का भी ध्यान",
+        description:
+          "हर रिफिल किया कार्ट्रिज कचरे में जाने वाला एक कम प्लास्टिक है।",
+      },
+    ],
+    cta: "दुकान का पता देखिए",
+  },
+  finder: {
+    eyebrow: "कार्ट्रिज फाइंडर",
+    title: "अपना कार्ट्रिज सेकंडों में ढूँढ़िए",
+    description:
+      "अपने प्रिंटर का मॉडल या कार्ट्रिज नंबर लिखिए। हम दिखा देंगे कि रिफिल उपलब्ध है या नहीं और WhatsApp पर कैसे पूछना है।",
+    searchLabel: "प्रिंटर मॉडल या कार्ट्रिज नंबर",
+    placeholder: "जैसे “HP 1005” या “Canon G2012”",
+    quickLabel: "आज़माकर देखिए",
+    clear: "सर्च साफ़ कीजिए",
+    resultsLabel: "मिलते-जुलते कार्ट्रिज",
+    match: "नतीजा",
+    matches: "नतीजे",
+    refillAvailable: "रिफिल उपलब्ध",
+    newOnly: "सिर्फ़ नया कार्ट्रिज",
+    priceOnRequest: "रेट के लिए पूछिए",
+    startingFrom: "शुरुआती रेट",
+    ask: "WhatsApp पर पूछिए",
+    modelsLabel: "इन प्रिंटरों के लिए",
+    moreModels: "+{count} और",
+    typeInk: "इंकजेट",
+    typeToner: "टोनर",
+    sampleNote:
+      "सैंपल कैटलॉग — रेट और स्टॉक की पुष्टि दुकान से करनी होगी। अपना सही मॉडल WhatsApp पर भेजिए।",
+    noResultsTitle: "यह मॉडल हमारी सैंपल लिस्ट में नहीं मिला।",
+    noResultsDescription:
+      "कोई बात नहीं — मॉडल का नाम या फोटो WhatsApp पर भेजिए, हम देख लेंगे।",
+    noResultsCta: "WhatsApp पर मॉडल भेजिए",
+    browseHint: "ऊपर अपना मॉडल लिखिए, या नीचे से कोई उदाहरण चुनिए।",
+    waMessage:
+      "नमस्ते Guru Kirpa Refilling Centre, मेरे प्रिंटर का मॉडल है: {model}. क्या {cartridge} का रिफिल उपलब्ध है? रेट क्या होगा?",
+    waNoResult:
+      "नमस्ते Guru Kirpa Refilling Centre, मेरा मॉडल आपकी ऑनलाइन लिस्ट में नहीं मिला: {model}. क्या आप देख सकते हैं कि इसका रिफिल या कार्ट्रिज मिल सकता है?",
+  },
+  pickup: {
+    eyebrow: "पिकअप, डिलीवरी और बल्क",
+    title: "ज़रूरत हो तो हम आपके पास भी आते हैं",
+    description:
+      "पिकअप और डिलीवरी उपलब्ध है — अपने इलाके के बारे में हमसे पूछ लीजिए। ऑफिस, स्कूल और दुकानें एक ही जगह से नियमित रिफिल और सप्लाई करा सकती हैं।",
+    badge: "पिकअप और डिलीवरी उपलब्ध",
+    cards: [
+      {
+        title: "घर और स्टूडेंट्स",
+        description:
+          "असाइनमेंट, नोट्स और रोज़ की प्रिंटिंग के लिए बाजार जाने की ज़रूरत नहीं।",
+      },
+      {
+        title: "ऑफिस और स्कूल",
+        description:
+          "महीने की ज़रूरत बताइए, हम नियमित रिफिल और कार्ट्रिज सप्लाई का रेट बता देंगे।",
+      },
+      {
+        title: "दुकानें और संस्थान",
+        description:
+          "अपने ग्राहकों के कार्ट्रिज के लिए एक भरोसेमंद लोकल रिफिल पार्टनर।",
+      },
+    ],
+    areasLabel: "डिलीवरी एरिया",
+    areasFallback:
+      "हम डिलीवरी करते हैं — अपना इलाका WhatsApp पर भेजिए, हम बता देंगे कि हम वहाँ आते हैं या नहीं।",
+    cta: "पिकअप और बल्क के बारे में पूछिए",
+    waMessage:
+      "नमस्ते Guru Kirpa Refilling Centre, मुझे अपने इलाके में पिकअप, डिलीवरी और बल्क सप्लाई के बारे में पूछना है।",
+  },
+  brands: {
+    eyebrow: "सपोर्टेड ब्रांड",
+    title: "आपके प्रिंटर के लिए सही कार्ट्रिज",
+    description:
+      "इंकजेट, लेज़र और टोनर — रोज़ इस्तेमाल होने वाले ब्रांड्स के कार्ट्रिज।",
+    similar: "और ऐसे ही दूसरे",
+    note: "ब्रांड के नाम सिर्फ़ कंपैटिबिलिटी बताने के लिए हैं।",
+  },
+  quote: {
+    eyebrow: "रेट पूछिए",
+    title: "बताइए आपको क्या चाहिए",
+    description:
+      "फॉर्म भरिए — WhatsApp खुल जाएगा और आपकी जानकारी पहले से लिखी होगी। हम उपलब्धता और रेट बता देंगे।",
+    name: "आपका नाम",
+    namePlaceholder: "जैसे: राहुल",
+    phone: "फोन नंबर",
+    phonePlaceholder: "जैसे: 98XXXXXXXX",
+    model: "प्रिंटर या कार्ट्रिज मॉडल",
+    modelPlaceholder: "जैसे: HP LaserJet 1005 / Q2612A",
+    message: "संदेश",
+    messagePlaceholder: "कोई और बात बतानी हो तो लिखिए…",
+    optional: "ज़रूरी नहीं",
+    submit: "WhatsApp पर भेजिए",
+    note: "इससे WhatsApp खुलेगा और आपका मैसेज भरा हुआ मिलेगा। इस वेबसाइट पर आपकी जानकारी सेव नहीं होती।",
+    waOpened: "WhatsApp नई टैब में खुलना चाहिए।",
+    waFallback: "अगर नहीं खुला, तो यहाँ दबाकर मैसेज भेजिए।",
+    required: "ज़रूरी",
+    waIntro: "नमस्ते Guru Kirpa Refilling Centre, मुझे रेट जानना है।",
+    sidePoints: [
+      {
+        title: "सीधे WhatsApp पर",
+        description:
+          "आपकी जानकारी हमारे मुख्य नंबर पर भेजने के लिए तैयार WhatsApp मैसेज में आ जाती है।",
+      },
+      {
+        title: "साइट पर कुछ सेव नहीं होता",
+        description:
+          "यहाँ कोई बैकएंड नहीं है। जब तक आप भेजते नहीं, जानकारी आपके ब्राउज़र में ही रहती है।",
+      },
+      {
+        title: "हिंदी या English में लिखिए",
+        description: "जैसे चाहें, वैसे मैसेज कीजिए। जवाब भी उसी भाषा में मिलेगा।",
+      },
+    ],
+    errors: {
+      name: "अपना नाम लिखिए।",
+      phone: "सही फोन नंबर डालिए (कम से कम 10 अंक)।",
+      model: "अपने प्रिंटर या कार्ट्रिज का मॉडल बताइए।",
+    },
+  },
+  faq: {
+    eyebrow: "सवाल-जवाब",
+    title: "आपके सवाल, सीधे जवाब",
+    description:
+      "कुछ और पूछना है? कॉल या WhatsApp कीजिए — अंदाज़ा लगाने से बेहतर है सीधे बात करना।",
+    items: [
+      {
+        question: "रिफिल किया कार्ट्रिज नए जैसा छापता है?",
+        answer:
+          "अच्छी स्याही से सही तरीके से किया गया रिफिल रोज़ की छपाई के लिए अच्छा रिज़ल्ट देता है। नतीजा कार्ट्रिज की हालत और प्रिंटर पर भी निर्भर करता है। हम देने से पहले टेस्ट करते हैं और अगर रिफिल फ़ायदे का नहीं है तो साफ़ बता देते हैं।",
+      },
+      {
+        question: "रिफिल में कितना समय लगता है?",
+        answer:
+          "यह कार्ट्रिज और उस दिन की भीड़ पर निर्भर करता है। पहले से कॉल या WhatsApp कीजिए, हम आपको सही समय बता देंगे।",
+      },
+      {
+        question: "कौन-कौन से ब्रांड हैंडल करते हैं?",
+        answer:
+          "HP, Canon, Epson, Brother, Samsung और ऐसे ही दूसरे ब्रांड्स के इंकजेट, लेज़र और टोनर कार्ट्रिज। अपना मॉडल भेजिए, हम पुष्टि कर देंगे।",
+      },
+      {
+        question: "पिकअप और डिलीवरी मिलती है?",
+        answer:
+          "जी हाँ, पिकअप और डिलीवरी उपलब्ध है। अपने इलाके का नाम WhatsApp पर भेजिए, हम बता देंगे कि हम वहाँ आते हैं या नहीं।",
+      },
+      {
+        question: "ऑफिस और स्कूल के लिए बल्क रेट मिलते हैं?",
+        answer:
+          "जी हाँ। अपनी महीने की ज़रूरत बताइए — नियमित रिफिल या कार्ट्रिज सप्लाई का रेट हम बता देंगे।",
+      },
+      {
+        question: "कार्ट्रिज लेने से पहले आप क्या जाँचते हैं?",
+        answer:
+          "हम पहले कार्ट्रिज की हालत देखते हैं और काम शुरू करने से पहले बता देते हैं कि रिफिल भरोसे से काम करेगा या नहीं।",
+      },
+      {
+        question: "रिफिल से प्रिंटर की वारंटी पर असर पड़ता है?",
+        answer:
+          "रिफिल आपके कार्ट्रिज पर किया जाता है। वारंटी की शर्तें हर प्रिंटर में अलग होती हैं, इसलिए शक हो तो प्रिंटर बनाने वाली कंपनी से पूछ लीजिए। हम आपको पूरी बात साफ़ बता देंगे।",
+      },
+    ],
+    stillStuck: "कुछ और पूछना है?",
+    chatCta: "WhatsApp पर पूछिए",
+  },
+  contact: {
+    eyebrow: "संपर्क",
+    title: "दुकान पर आइए, कॉल कीजिए या WhatsApp कीजिए",
+    description:
+      "हम न्यू रंजीत नगर, नई दिल्ली में हैं। नीचे दोनों नंबर दुकान के हैं; WhatsApp आमतौर पर सबसे जल्दी जवाब देता है।",
+    addressLabel: "पता",
+    phoneLabel: "कॉल या WhatsApp",
+    hoursLabel: "दुकान का समय",
+    areasLabel: "सर्विस एरिया",
+    call: "कॉल",
+    whatsapp: "WhatsApp",
+    directions: "रास्ता देखिए",
+    openMap: "Google Maps में खोलिए",
+    mapTitle:
+      "Guru Kirpa Refilling Centre, न्यू रंजीत नगर, नई दिल्ली का Google नक्शा",
+    mapLoading: "नक्शा लोड हो रहा है…",
+    hoursFallback: "आज का समय जानने के लिए कॉल या WhatsApp कीजिए।",
+    areasFallback: "अपने इलाके के बारे में पूछ लीजिए।",
+    pickupNote: "पिकअप और डिलीवरी उपलब्ध — अपने इलाके के बारे में पूछिए।",
+    deliveryBadge: "पिकअप और डिलीवरी उपलब्ध",
+    primaryBadge: "मुख्य WhatsApp",
+    secondaryBadge: "दूसरा नंबर",
+  },
+  footer: {
+    about:
+      "इंकजेट, लेज़र और टोनर प्रिंटर के लिए नए कार्ट्रिज और रिफिल — न्यू रंजीत नगर, नई दिल्ली की लोकल दुकान से।",
+    explore: "पेज",
+    servicesTitle: "सर्विस",
+    contactTitle: "संपर्क",
+    hoursTitle: "समय",
+    legal:
+      "ब्रांड के नाम सिर्फ़ यह बताने के लिए इस्तेमाल किए गए हैं कि कौन-सा कार्ट्रिज किस प्रिंटर में लगता है। Guru Kirpa Refilling Centre का HP, Canon, Epson, Brother, Samsung या यहाँ बताए गए किसी भी दूसरे ब्रांड से कोई संबंध या अनुमोदन नहीं है।",
+    rights: "सभी अधिकार सुरक्षित।",
+    sampleNote:
+      "कार्ट्रिज फाइंडर में सैंपल लिस्ट है। अपने सही मॉडल की पुष्टि WhatsApp पर कीजिए।",
+    servingYears: "न्यू रंजीत नगर में {years} साल से सेवा में।",
+  },
+  common: {
+    call: "कॉल",
+    whatsapp: "WhatsApp",
+    backHome: "होम पर वापस",
+    waHello:
+      "नमस्ते Guru Kirpa Refilling Centre, मुझे प्रिंटर कार्ट्रिज रिफिलिंग के बारे में पूछना है।",
+  },
+  notFound: {
+    title: "यह पेज रिफिलिंग के लिए चला गया।",
+    description:
+      "जो पेज आप ढूँढ़ रहे हैं वह यहाँ नहीं है। होम पर वापस जाइए या WhatsApp पर मैसेज कीजिए।",
+    home: "होम पर वापस जाइए",
+  },
+};
+
+export const translations = { en, hi } as const;
+
+export type Translation = typeof en;
+export type { Locale };
