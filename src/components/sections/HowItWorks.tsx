@@ -46,7 +46,7 @@ export function HowItWorks() {
           {t.steps.items.map((step, index) => {
             const Icon = stepIcons[index];
             return (
-              <StaggerItem key={step.title} className="h-full">
+              <StaggerItem key={`step-${index}`} className="h-full">
                 <article className="group relative h-full overflow-hidden rounded-[1.5rem] border border-white/10 bg-white/[0.035] p-6 transition duration-300 hover:-translate-y-1 hover:border-white/25 hover:bg-white/[0.06]">
                   <div className="flex items-center justify-between">
                     <span className="grid h-11 w-11 place-items-center rounded-2xl bg-white/[0.07] text-brand-cyan">

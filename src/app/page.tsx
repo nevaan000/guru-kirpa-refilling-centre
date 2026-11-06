@@ -2,6 +2,8 @@ import { Hero } from "@/components/sections/Hero";
 import { Services } from "@/components/sections/Services";
 import { HowItWorks } from "@/components/sections/HowItWorks";
 import { WhyUs } from "@/components/sections/WhyUs";
+import { UsAdvantage } from "@/components/sections/UsAdvantage";
+import { WelcomeVoucher } from "@/components/sections/WelcomeVoucher";
 import { CartridgeFinder } from "@/components/sections/CartridgeFinder";
 import { PickupBulk } from "@/components/sections/PickupBulk";
 import { BrandsMarquee } from "@/components/sections/BrandsMarquee";
@@ -73,6 +75,8 @@ export default function Home() {
         <Services />
         <HowItWorks />
         <WhyUs />
+        <UsAdvantage />
+        <WelcomeVoucher />
         <CartridgeFinder />
         <PickupBulk />
         <BrandsMarquee />

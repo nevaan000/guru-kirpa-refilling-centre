@@ -4,7 +4,7 @@ Website for a printer cartridge and toner refilling shop in New Ranjeet Nagar, N
 
 ## Where to edit
 
-- `src/data/site.ts` — phones, address, hours, service areas, pickup/delivery details. Anything in `[SQUARE BRACKETS]` is a placeholder and is hidden from the website until replaced.
+- `src/data/site.ts` — phones, address, hours, service areas, pickup/delivery details. Anything in `[SQUARE BRACKETS]` is a placeholder and is never presented as a real detail. The first-time welcome voucher lives in `site.voucher`: fill its `[OWNER TO CONFIRM]` values, replace the sample code, then set `active: true` to remove the promotional-preview label.
 - `src/data/cartridges.ts` — cartridge finder catalogue. Sample entries are marked as samples; add real models, refill availability, and optional starting prices.
 - `src/data/translations.ts` — all visible English and Hindi copy.
 - `src/app/globals.css` — colour tokens and global styles.

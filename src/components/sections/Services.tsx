@@ -77,7 +77,7 @@ export function Services() {
           {rest.map((service, index) => {
             const Icon = itemIcons[index];
             return (
-              <StaggerItem key={service.title} className="h-full">
+              <StaggerItem key={`service-${index}`} className="h-full">
                 <article className="group flex h-full flex-col rounded-[1.75rem] border border-ink/[0.08] bg-white p-6 shadow-[0_20px_50px_-40px_rgba(11,27,58,0.5)] transition duration-300 hover:-translate-y-1 hover:border-ink/20 hover:shadow-card">
                   <div className="flex items-start justify-between gap-3">
                     <span

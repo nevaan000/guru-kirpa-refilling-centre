@@ -30,6 +30,7 @@ export function SiteFooter() {
     { href: "#services", label: t.nav.services },
     { href: "#how-it-works", label: t.nav.howItWorks },
     { href: "#finder", label: t.nav.finder },
+    { href: "#welcome-voucher", label: t.nav.voucher },
     { href: "#pickup", label: t.pickup.eyebrow },
     { href: "#quote", label: t.nav.quote },
     { href: "#faq", label: t.nav.faq },

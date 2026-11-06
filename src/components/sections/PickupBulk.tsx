@@ -71,7 +71,7 @@ export function PickupBulk() {
           {t.pickup.cards.map((card, index) => {
             const Icon = pickupIcons[index];
             return (
-              <StaggerItem key={card.title}>
+              <StaggerItem key={`pickup-${index}`}>
                 <article className="group flex gap-4 rounded-[1.5rem] border border-ink/[0.08] bg-white p-5 shadow-[0_18px_45px_-40px_rgba(11,27,58,0.55)] transition duration-300 hover:-translate-y-0.5 hover:border-ink/20 hover:shadow-card sm:p-6">
                   <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-ink text-paper transition-colors duration-300 group-hover:bg-brand-cyan group-hover:text-ink">
                     <Icon className="h-5 w-5" />

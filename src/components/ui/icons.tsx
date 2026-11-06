@@ -293,3 +293,22 @@ export function ShieldCheckIcon(props: IconProps) {
     </StrokeIcon>
   );
 }
+
+export function GiftIcon(props: IconProps) {
+  return (
+    <StrokeIcon {...props}>
+      <path d="M4 11h16v9H4zM3 7.5h18V11H3zM12 7.5V20" />
+      <path d="M12 7.5H8.2a2.2 2.2 0 1 1 0-4.4C11 3.1 12 7.5 12 7.5Z" />
+      <path d="M12 7.5h3.8a2.2 2.2 0 1 0 0-4.4C13 3.1 12 7.5 12 7.5Z" />
+    </StrokeIcon>
+  );
+}
+
+export function SparklesIcon(props: IconProps) {
+  return (
+    <StrokeIcon {...props}>
+      <path d="m12 3 1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8L12 3Z" />
+      <path d="m18.5 15.5.9 2.5 2.5.9-2.5.9-.9 2.5-.9-2.5-2.5-.9 2.5-.9.9-2.5Z" />
+    </StrokeIcon>
+  );
+}

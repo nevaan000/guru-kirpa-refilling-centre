@@ -28,6 +28,17 @@ export type OpeningHoursRule = {
   closes: string;
 };
 
+export type VoucherConfig = {
+  /** The offer is only presented as live once this is true and every value is filled. */
+  active: boolean;
+  code: string;
+  discount: string;
+  minimumPurchase: string;
+  validity: string;
+  eligibility: string;
+  oneTimeUse: string;
+};
+
 const address = {
   line1: {
     en: "E-Block, DDA Flats",
@@ -131,6 +142,30 @@ export const site = {
   /** TODO: put a number here to show "Serving New Ranjeet Nagar for X years". */
   yearsInBusiness: "[NUMBER OF YEARS, or leave blank]" as number | string,
 
+  /**
+   * First-time customer welcome voucher.
+   *
+   * Until every [OWNER TO CONFIRM] value below is replaced and `active` is
+   * true, the website shows a clearly labelled promotional preview and does
+   * not promise a discount. Keep the sample code WELCOME-GK only while the
+   * voucher is a preview.
+   */
+  voucher: {
+    active: false,
+    /** TODO: replace with the real voucher code before activating. */
+    code: "WELCOME-GK",
+    /** TODO: e.g. "10% off" or "₹50 off". */
+    discount: "[OWNER TO CONFIRM]",
+    /** TODO: e.g. "₹300". */
+    minimumPurchase: "[OWNER TO CONFIRM]",
+    /** TODO: e.g. "31 December 2026" or "30 days from issue". */
+    validity: "[OWNER TO CONFIRM]",
+    /** TODO: e.g. "Any cartridge refill or new cartridge". */
+    eligibility: "[OWNER TO CONFIRM]",
+    /** TODO: confirm whether it is once per customer. */
+    oneTimeUse: "[OWNER TO CONFIRM]",
+  } as VoucherConfig,
+
   supportedBrands: ["HP", "Canon", "Epson", "Brother", "Samsung"],
 } as const;
 
@@ -162,4 +197,21 @@ export function getOpeningHours(locale: Locale): string | null {
 
 export function getYearsInBusiness(): number | null {
   return typeof site.yearsInBusiness === "number" ? site.yearsInBusiness : null;
+}
+
+/**
+ * The voucher is only treated as live once the owner switches it on AND every
+ * offer detail is filled in. Otherwise the site keeps showing the preview.
+ */
+export function isVoucherLive(): boolean {
+  const voucher = site.voucher;
+  return (
+    voucher.active &&
+    !isPlaceholder(voucher.code) &&
+    !isPlaceholder(voucher.discount) &&
+    !isPlaceholder(voucher.minimumPurchase) &&
+    !isPlaceholder(voucher.validity) &&
+    !isPlaceholder(voucher.eligibility) &&
+    !isPlaceholder(voucher.oneTimeUse)
+  );
 }

@@ -12,6 +12,7 @@ const en = {
     howItWorks: "How it works",
     finder: "Find cartridge",
     faq: "FAQs",
+    voucher: "First-visit gift",
     contact: "Contact",
     call: "Call now",
     quote: "Get a quote",
@@ -114,32 +115,121 @@ const en = {
   },
   why: {
     eyebrow: "Why Guru Kirpa",
-    title: "A local shop you can walk into",
+    title: "Why Customers Choose Guru Kirpa",
     description:
-      "A real shop in New Ranjeet Nagar, where you can talk to the person doing the work — not a call centre.",
+      "Reliable printing solutions, honest pricing and personal service — everything your printer needs in one place.",
     items: [
       {
-        title: "Save on every print",
+        title: "Affordable Printing",
         description:
-          "A refill usually costs less than a new cartridge, so your printing budget goes further.",
+          "Save money by refilling instead of unnecessarily buying new.",
       },
       {
-        title: "Quick, without the runaround",
+        title: "Quality Assurance",
         description:
-          "Call ahead and we'll tell you when your cartridge will be ready for pickup.",
+          "Cartridges are cleaned, refilled and test-printed before handover.",
       },
       {
-        title: "Ink we stand behind",
+        title: "Transparent Pricing",
         description:
-          "Quality inks and toners, chosen for clean, consistent prints — and tested before handover.",
+          "You get a price quotation before any work begins.",
       },
       {
-        title: "A lighter footprint",
+        title: "Multiple Printer Brands",
         description:
-          "Every refilled cartridge is one less piece of plastic thrown away.",
+          "HP, Canon, Epson, Brother, Samsung and other compatible brands.",
+      },
+      {
+        title: "Convenient Local Service",
+        description:
+          "A trusted local shop in New Ranjeet Nagar, New Delhi.",
+      },
+      {
+        title: "Pickup and Delivery",
+        description: "Convenient options in supported areas.",
+      },
+      {
+        title: "Personal Assistance",
+        description:
+          "Help identifying the correct cartridge and choosing suitable products.",
       },
     ],
-    cta: "Find the shop",
+    finderCta: "Find your cartridge",
+    waCta: "Chat on WhatsApp",
+    waMessage:
+      "Hello Guru Kirpa Refilling Centre, I'd like to know more about your cartridge refilling and printing services.",
+  },
+  usp: {
+    eyebrow: "Our advantage",
+    title: "Your Complete Printing Partner, Right Around the Corner.",
+    description:
+      "From affordable cartridge refilling to new cartridges, toner solutions and printer accessories, Guru Kirpa provides convenient printing solutions for homes, students, offices, schools and businesses.",
+    items: [
+      {
+        letter: "A",
+        title: "SAVE MORE",
+        description:
+          "Affordable refilling options that reduce your printing expenses.",
+      },
+      {
+        letter: "B",
+        title: "TRUST EVERY PRINT",
+        description:
+          "Cleaning, refilling and test-printing before your cartridge is handed over.",
+      },
+      {
+        letter: "C",
+        title: "EVERYTHING IN ONE PLACE",
+        description:
+          "Cartridge refilling, new cartridges, toner, printer accessories and bulk supply.",
+      },
+    ],
+    finderCta: "Find your cartridge",
+    waCta: "Contact us on WhatsApp",
+    waMessage:
+      "Hello Guru Kirpa Refilling Centre, I'd like to know which printing solution suits my needs.",
+  },
+  voucher: {
+    eyebrow: "Welcome gift",
+    title: "Your First Visit Comes With a Gift!",
+    description:
+      "New to Guru Kirpa? Enjoy a special welcome voucher on your first eligible purchase or cartridge refill.",
+    previewTag: "Promotional preview",
+    previewNote:
+      "This voucher is a promotional preview and is not active yet. Message us and the shop will confirm the current offer and its terms.",
+    cardTitle: "Welcome Gift",
+    cardSubtitle: "For first-time customers",
+    codeLabel: "Voucher code",
+    sampleCodeLabel: "Sample voucher code",
+    discountLabel: "Welcome offer",
+    minimumLabel: "Minimum purchase",
+    validityLabel: "Valid until",
+    eligibilityLabel: "Eligible on",
+    oneTimeLabel: "One-time use",
+    toBeConfirmed: "To be confirmed by the shop",
+    claimCta: "Claim Your Welcome Voucher",
+    quoteCta: "Get a Free Quote",
+    contactCta: "Questions? Contact us on WhatsApp",
+    claimNote:
+      "Tapping the button only opens WhatsApp. The voucher is claimed when the shop confirms your eligibility and terms.",
+    steps: [
+      {
+        title: "Message us",
+        description: "Send the voucher message on WhatsApp.",
+      },
+      {
+        title: "We confirm the offer",
+        description: "The shop shares the current discount and terms.",
+      },
+      {
+        title: "Claim on your visit",
+        description: "The voucher is applied only after the shop confirms.",
+      },
+    ],
+    waMessage:
+      "Hello Guru Kirpa! I am a first-time customer and would like to claim my welcome voucher. Please share the current offer and its terms.",
+    waGeneral:
+      "Hello Guru Kirpa Refilling Centre, I have a question about the first-time welcome voucher.",
   },
   finder: {
     eyebrow: "Cartridge finder",
@@ -357,6 +447,7 @@ const hi: typeof en = {
     howItWorks: "कैसे होता है",
     finder: "कार्ट्रिज खोजें",
     faq: "सवाल-जवाब",
+    voucher: "पहली विज़िट का तोहफ़ा",
     contact: "संपर्क",
     call: "कॉल कीजिए",
     quote: "रेट पूछिए",
@@ -459,32 +550,120 @@ const hi: typeof en = {
   },
   why: {
     eyebrow: "Guru Kirpa क्यों?",
-    title: "आपके मोहल्ले की भरोसेमंद दुकान",
+    title: "ग्राहक Guru Kirpa को क्यों चुनते हैं",
     description:
-      "न्यू रंजीत नगर की असली दुकान, जहाँ आप सीधे उसी इंसान से बात कर सकते हैं जो आपका कार्ट्रिज संभालता है — किसी कॉल सेंटर से नहीं।",
+      "भरोसेमंद प्रिंटिंग सुविधाएँ, साफ़-साफ़ रेट और अपनापन — आपके प्रिंटर की हर ज़रूरत एक ही जगह।",
     items: [
       {
-        title: "हर प्रिंट पर बचत",
+        title: "किफ़ायती प्रिंटिंग",
         description:
-          "रिफिल आमतौर पर नया कार्ट्रिज खरीदने से कम में पड़ता है, इसलिए प्रिंटिंग का खर्च कम रहता है।",
+          "नया कार्ट्रिज बेवजह खरीदने के बजाय रिफिल कराइए और पैसे बचाइए।",
       },
       {
-        title: "बिना भागदौड़, जल्दी तैयार",
+        title: "क्वालिटी की जाँच",
         description:
-          "कॉल कीजिए और हम बता देंगे कि आपका कार्ट्रिज कब तैयार होगा।",
+          "हैंडओवर से पहले कार्ट्रिज साफ किया जाता है, भरा जाता है और टेस्ट प्रिंट होता है।",
       },
       {
-        title: "अच्छी स्याही, साफ़ छपाई",
-        description:
-          "साफ़ और एक जैसी छपाई के लिए चुनी हुई स्याही और टोनर — देने से पहले टेस्ट के साथ।",
+        title: "साफ़ रेट, कोई छिपा खर्च नहीं",
+        description: "काम शुरू होने से पहले रेट की पूरी जानकारी दी जाती है।",
       },
       {
-        title: "पर्यावरण का भी ध्यान",
+        title: "कई प्रिंटर ब्रांड",
         description:
-          "हर रिफिल किया कार्ट्रिज कचरे में जाने वाला एक कम प्लास्टिक है।",
+          "HP, Canon, Epson, Brother, Samsung और दूसरे कंपैटिबल ब्रांड के लिए।",
+      },
+      {
+        title: "आस-पास की भरोसेमंद दुकान",
+        description: "न्यू रंजीत नगर, नई दिल्ली की लोकल दुकान।",
+      },
+      {
+        title: "पिकअप और डिलीवरी",
+        description:
+          "जिन इलाकों में सुविधा उपलब्ध है, वहाँ पिकअप और डिलीवरी के विकल्प।",
+      },
+      {
+        title: "निजी मदद",
+        description:
+          "सही कार्ट्रिज पहचानने और अपने हिसाब से प्रोडक्ट चुनने में मदद।",
       },
     ],
-    cta: "दुकान का पता देखिए",
+    finderCta: "अपना कार्ट्रिज खोजिए",
+    waCta: "WhatsApp पर बात कीजिए",
+    waMessage:
+      "नमस्ते Guru Kirpa Refilling Centre, मुझे आपकी कार्ट्रिज रिफिलिंग और प्रिंटिंग सर्विस के बारे में और जानना है।",
+  },
+  usp: {
+    eyebrow: "हमारी खास बात",
+    title: "आपका पूरा प्रिंटिंग पार्टनर, बिल्कुल आपके पास।",
+    description:
+      "किफ़ायती कार्ट्रिज रिफिलिंग से लेकर नए कार्ट्रिज, टोनर समाधान और प्रिंटर एक्सेसरीज़ तक — Guru Kirpa घरों, स्टूडेंट्स, ऑफिस, स्कूलों और दुकानों के लिए आसान प्रिंटिंग सुविधाएँ देता है।",
+    items: [
+      {
+        letter: "A",
+        title: "ज़्यादा बचत",
+        description:
+          "किफ़ायती रिफिल विकल्प, जिससे प्रिंटिंग का खर्च कम होता है।",
+      },
+      {
+        letter: "B",
+        title: "हर प्रिंट पर भरोसा",
+        description:
+          "कार्ट्रिज देने से पहले सफ़ाई, रिफिल और टेस्ट प्रिंट — तीनों किए जाते हैं।",
+      },
+      {
+        letter: "C",
+        title: "सब कुछ एक ही जगह",
+        description:
+          "कार्ट्रिज रिफिलिंग, नए कार्ट्रिज, टोनर, प्रिंटर एक्सेसरीज़ और बल्क सप्लाई।",
+      },
+    ],
+    finderCta: "अपना कार्ट्रिज खोजिए",
+    waCta: "WhatsApp पर संपर्क कीजिए",
+    waMessage:
+      "नमस्ते Guru Kirpa Refilling Centre, मुझे बताइए कि मेरी ज़रूरत के लिए कौन-सी प्रिंटिंग सुविधा सही रहेगी।",
+  },
+  voucher: {
+    eyebrow: "स्वागत तोहफ़ा",
+    title: "आपकी पहली विज़िट पर एक तोहफ़ा!",
+    description:
+      "Guru Kirpa पर पहली बार आ रहे हैं? अपनी पहली पात्र खरीदारी या कार्ट्रिज रिफिल पर खास स्वागत वाउचर पाइए।",
+    previewTag: "प्रोमोशनल प्रीव्यू",
+    previewNote:
+      "यह वाउचर अभी सिर्फ़ प्रीव्यू है और चालू नहीं हुआ है। WhatsApp पर मैसेज कीजिए, दुकान वर्तमान ऑफ़र और उसकी शर्तें बता देगी।",
+    cardTitle: "स्वागत तोहफ़ा",
+    cardSubtitle: "पहली बार आने वाले ग्राहकों के लिए",
+    codeLabel: "वाउचर कोड",
+    sampleCodeLabel: "सैंपल वाउचर कोड",
+    discountLabel: "स्वागत ऑफ़र",
+    minimumLabel: "कम से कम खरीदारी",
+    validityLabel: "कब तक मान्य",
+    eligibilityLabel: "किस पर लागू",
+    oneTimeLabel: "एक बार इस्तेमाल",
+    toBeConfirmed: "दुकान से पुष्टि होगी",
+    claimCta: "अपना स्वागत वाउचर क्लेम कीजिए",
+    quoteCta: "मुफ़्त रेट पूछिए",
+    contactCta: "सवाल है? WhatsApp पर संपर्क कीजिए",
+    claimNote:
+      "बटन दबाने से सिर्फ़ WhatsApp खुलता है। दुकान आपकी पात्रता और शर्तें पुष्टि करने के बाद ही वाउचर क्लेम माना जाएगा।",
+    steps: [
+      {
+        title: "मैसेज कीजिए",
+        description: "वाउचर वाला संदेश WhatsApp पर भेजिए।",
+      },
+      {
+        title: "हम ऑफ़र पुष्टि करेंगे",
+        description: "दुकान वर्तमान छूट और शर्तें बता देगी।",
+      },
+      {
+        title: "विज़िट पर क्लेम कीजिए",
+        description: "दुकान की पुष्टि के बाद ही वाउचर लागू होगा।",
+      },
+    ],
+    waMessage:
+      "नमस्ते Guru Kirpa! मैं पहली बार आने वाला/वाली ग्राहक हूँ और अपना स्वागत वाउचर क्लेम करना चाहता/चाहती हूँ। कृपया वर्तमान ऑफ़र और उसकी शर्तें बताइए।",
+    waGeneral:
+      "नमस्ते Guru Kirpa Refilling Centre, मुझे पहली विज़िट वाले स्वागत वाउचर के बारे में पूछना है।",
   },
   finder: {
     eyebrow: "कार्ट्रिज फाइंडर",
